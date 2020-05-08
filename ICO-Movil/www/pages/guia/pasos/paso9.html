@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function cerrarGuia() {
+                window.parent.cerrarVentana()
+            }
+        </script>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center">Ya hemos terminado</p>
+        <p id="parrafo1" class="text">
+            Gracias por haber leído la guía de la aplicación.
+        </p>
+        <p id="parrafo2" class="text">
+            Cualquier duda puedes volver a ver la guía presionando en el botón
+            Guía del menú.
+        </p>
+        <div class="center">
+            <a
+            id="cerrar-guia"
+            onclick="cerrarGuia()"
+            class="waves-effect waves-light btn"
+            style="width: 80%;margin-bottom: 20px;"
+            >Cerrar Guía</a
+        >
+        </div>
+        <div class="center">
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/logo_ico.png"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("subtitulo").innerHTML = "Ja hem acabat"
+                document.getElementById("parrafo1").innerHTML = "Gràcies per haver llegit la guia de l'aplicació."
+                document.getElementById("parrafo2").innerHTML = "Qualsevol dubte pots tornar a veure la guia pressionant al botó Guia del menú."
+                document.getElementById("cerrar-guia").innerHTML = "Tancar Guia"
+            }
+        </script>
+    </body>
+</html>

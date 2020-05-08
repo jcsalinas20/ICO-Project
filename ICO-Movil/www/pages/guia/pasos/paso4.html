@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center" style="margin: 0 0 3px 0;">
+            Detalles de una Consulta
+        </p>
+        <p id="parrafo" class="text" style="margin: 0;">
+            Si le damos al botón verde que se encuentra en la derecha de una
+            consulta se nos abrirá una nueva ventana con los detalles de la
+            consulta seleccionada, especificando la información del Doctor mas
+            la del Hospital al que tienes que ir.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/detallesConsulta1.JPG"
+                alt="ico-logo"
+            />
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/detallesConsulta2.JPG"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("subtitulo").innerHTML =
+                    "Detalls d'una Consulta"
+                document.getElementById("parrafo").innerHTML =
+                    "Si li donem al botó verd que es troba a la dreta d'una consulta se'ns obrirà una nova finestra amb els detalls de la consulta seleccionada, especificant la informació del Doctor mes la de l'Hospital què has d'anar."
+            }
+        </script>
+    </body>
+</html>

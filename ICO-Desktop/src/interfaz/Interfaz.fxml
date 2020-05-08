@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #F1F3FF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.Interfaz">
+   <children>
+      <ToolBar orientation="VERTICAL" prefWidth="111.0" style="-fx-background-color: #2784FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane>
+               <children>
+                  <ImageView fx:id="dashboard_image" fitHeight="38.79" fitWidth="38.79" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="270.5">
+                     <image>
+                        <Image url="file:/C:/Users/jcsal/OneDrive/Escritorio/ICO-Desktop/images/home_dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#loadDashboard" prefHeight="38.79" prefWidth="38.79" style="-fx-background-color: none;" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="270.5">
+                     <tooltip>
+                        <Tooltip autoFix="false" text="Dashboard">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip></Button>
+                  <ImageView fx:id="pacientes_image" fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="400.0">
+                     <image>
+                        <Image url="file:///C:/Users/jcsal/OneDrive/Escritorio/ICO-Desktop/images/pacientes_dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#loadSearch" prefHeight="24.0" prefWidth="36.0" style="-fx-background-color: none;" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="400.0">
+                     <tooltip>
+                        <Tooltip text="Pacientes">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip></Button>
+                  <ImageView fitHeight="38.0" fitWidth="40.0" opacity="0.44" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="515.0">
+                     <image>
+                        <Image url="file:/C:/Users/jcsal/OneDrive/Escritorio/ICO-Desktop/images/logout_dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: none;" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="515.0">
+                     <tooltip>
+                        <Tooltip text="Cerrar sesión">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip></Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="scene_panel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0" />
+      <AnchorPane prefHeight="200.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="nombre_escena" text="Dashboard" textFill="#707070" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="SansSerif Bold" size="42.0" />
+               </font>
+            </Label>
+            <MenuButton alignment="CENTER" layoutX="1560.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="91.0" stylesheets="@menubutton.css" text="Menú" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#cambiarIdioma" text="%lbl.cambiaridioma" />
+                <MenuItem mnemonicParsing="false" onAction="#logout" text="%text.cerrarsesion" />
+              </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

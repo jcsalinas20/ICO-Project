@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center">Guía Inicial</p>
+        <p id="parrafo1" class="text">
+            Bienvenid@ a la APP de la ICO, te voy a explicar en una serie de
+            pasos como funciona y como esta distribuido todo en la APP.
+        </p>
+        <p id="parrafo2" class="text">
+            Podrás cerrar ésta ventana cundo quieras, solo tendrás que darle a
+            la X de arriba a la derecha.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/logo_ico.png"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat"){
+                document.getElementById("subtitulo").innerHTML = "Guia Inicial"
+                document.getElementById("parrafo1").innerHTML = "Benvinguts a l'APP de la ICO, et vaig a explicar en una sèrie de passos com funciona i com està distribuït tot en l'APP."
+                document.getElementById("parrafo2").innerHTML = "Podràs tancar aquesta finestra quan vulguis, només hauràs de donar-li a la X de dalt a la dreta."
+            }
+        </script>
+    </body>
+</html>

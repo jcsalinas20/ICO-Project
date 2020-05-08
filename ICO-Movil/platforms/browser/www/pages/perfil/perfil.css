@@ -1,0 +1,68 @@
+.close {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* body {
+    height: auto !important;
+} */
+
+.container-datos {
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+    margin: 0px 15px 30px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: inset 0 0 4px black;
+}
+
+#foto-perfil {
+    width: 20%;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#nombre {
+    width: 80%;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+#fecha {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+}
+
+#dni {
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+}
+
+#genero {
+    width: 30%;
+    text-align: center;
+    font-size: 15px;
+}
+
+#consultasP {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+}
+
+#consultasH {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}

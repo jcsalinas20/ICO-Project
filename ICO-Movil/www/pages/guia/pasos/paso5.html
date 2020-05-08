@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center" style="margin: 0 0 3px 0;">
+            Pastillas
+        </p>
+        <p id="parrafo" class="text" style="margin: 0;">
+            Aquí apareceran las pastillas que tienes que tomarte durante ese
+            día. La pastilla se pondrá en naranja cuando te la tengas que tomar,
+            en verde si marcas como que ya te la has tomado y en rojo si ya ha
+            pasado mas de 1 hora y aún no la has marcado como que te la has
+            tomado.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/pastillas.JPG"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("subtitulo").innerHTML = "Pastilles"
+                document.getElementById("parrafo").innerHTML =
+                    "Aquí apareixeran les pastilles que has de prendre durant aquest dia. La pastilla es posarà en taronja quan te la hagis de prendre, en verd si marques com que ja te l'has pres i en vermell si ja ha passat mes d'1 hora i encara no l'has marcat com que te l'has pres."
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center" style="margin: 0;">Home</p>
+        <p id="parrafo" class="text" style="margin: 0;">
+            En el Home encontrarás todas las noticias relacionadas con la ICO.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/Home.JPG"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("parrafo").innerHTML = "Al Home trobaràs totes les notícies relacionades amb la ICO."
+            }
+        </script>
+    </body>
+</html>

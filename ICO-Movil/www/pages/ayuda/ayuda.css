@@ -1,0 +1,47 @@
+.close {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* body {
+    height: auto !important;
+} */
+
+.container-datos {
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+    margin: 0px 15px 30px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: inset 0 0 4px black;
+}
+
+#telefono {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+#direccion {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.mapouter {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}

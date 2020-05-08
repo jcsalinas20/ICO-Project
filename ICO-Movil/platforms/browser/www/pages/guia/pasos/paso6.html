@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center" style="margin: 0 0 3px 0;">Menú</p>
+        <p id="parrafo1" class="text" style="margin: 0;">
+            Para abrir el menú solo hace falta presionar la hamburgesa que hay
+            arriba a la derecha, este menu estará habilitado en todo momento
+            para acceder des de cualquier sitio.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="50px"
+                src="../../../img/menu1.JPG"
+                alt="ico-logo"
+            />
+        </div>
+        <p id="parrafo2" class="text" style="margin: 0;">
+            En el menú están las siguientes opciones de las cuales algunas ya se
+            han explicado en algunos pasos anteriores y otras opciones se
+            explican en los siguientes pasos.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="200px"
+                src="../../../img/menu2.JPG"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("parrafo1").innerHTML = "Per obrir el menú només cal pressionar la hamburguesa que hi ha a dalt a la dreta, aquest menú estarà habilitat en tot moment per accedir des de qualsevol lloc."
+                document.getElementById("parrafo2").innerHTML = "Al menú hi ha les següents opcions de les quals algunes ja s'han explicat en alguns passos anteriors i altres opcions s'expliquen en els següents passos."
+            }
+        </script>
+    </body>
+</html>

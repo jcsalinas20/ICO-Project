@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+
+    <!--Importacion de JQuery-->
+    <script src=".././../js/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+    <link href="../../css/icon.css" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href=".././../css/materialize.min.css" />
+    <script src="home.js"></script>
+    <!--CSS DEL HOME-->
+    <link rel="stylesheet" href="./home.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* Efecto slide de izquierda a centro*/
+        @keyframes popup {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p id="userID" style="display: none;"></p>
+    <script>
+        document.getElementById('userID').innerHTML = getParameterByName('user')
+    </script>
+    <div style="z-index: 1; display: none; background-color: #69696970;" id="container-frame-cambio-password"
+        class="col s12 frames">
+        <iframe rel="preload" id="frame-password" src="../cambioPassword/cambioPassword.html" frameborder="0"
+            width="90%" height="60%"></iframe>
+    </div>
+
+    <!--IFrame de Noticias o Home-->
+    <div id="container-frame-home" class="col s12 frames">
+        <iframe frameborder="0" id="frameHome" width="100%" height="87%" src="./noticias/noticias.html">
+        </iframe>
+    </div>
+    <!--IFrame de Consultas-->
+    <div id="container-frame-consultas" class="col s12 frames">
+        <iframe frameborder="0" id="frameConsultas" width="100%" height="87%" src="./consultas/consultas.html">
+        </iframe>
+    </div>
+    <!--IFrame de Pastillas-->
+    <div id="container-frame-pastillas" class="col s12 frames">
+        <iframe frameborder="0" id="framePastillas" width="100%" height="87%" src="./pastillas/pastillas.html">
+        </iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 ningunPadding">
+                    <ul id="footer" class="tabs">
+                        <li class="tab col s4">
+                            <a onclick="footerSlidePage('Home')" id="home" class="active"
+                                href="#container-frame-home">Home</a>
+                        </li>
+                        <li class="tab col s4">
+                            <a onclick="footerSlidePage('Consultas')" id="consultas"
+                                href="#container-frame-consultas">Consultas</a>
+                        </li>
+                        <li class="tab col s4">
+                            <a onclick="footerSlidePage('Pastillas')" id="pastillas"
+                                href="#container-frame-pastillas">Pastillas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        primerInicioSesion(document.getElementById('userID').innerHTML)
+
+        // Funcion para hacer el efecto de slide en el Footer
+        function footerSlidePage(page) {
+            if (
+                document.getElementsByClassName("indicator")[0].style
+                .left === "0px" // Si es igual a 0 la pestaña actual es Home
+            ) {
+                paginaActual = "Home"
+            } else if (
+                document.getElementsByClassName("indicator")[0].style
+                .left === "225px" // Si es igual a 225 la pestaña actual es Pastillas
+            ) {
+                paginaActual = "Pastillas"
+            } else {
+                paginaActual = "Consultas" // Si no es ninguna de las 2 la pestaña actual es Consultas
+            }
+            paginaSeleccionada = page // Pagina a la que se va ha saltar
+
+            // Guardar en una variable la pestña actual y a la que se va ha saltar
+            saltoDePagina = paginaActual + "/" + paginaSeleccionada
+
+            // Pasar de la pestaña Home a Consultas
+            if (saltoDePagina === "Home/Consultas") {
+                document.getElementById(
+                        "frameHome"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromLeft"
+                document.getElementById(
+                        "frameConsultas"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromRight"
+                document.getElementById("container-frame-home").className =
+                    "col s12 frames"
+                document.getElementById(
+                    "container-frame-home"
+                ).style.display = "none"
+            } // Pasar de la pestaña Home a Pastillas
+            else if (saltoDePagina === "Home/Pastillas") {
+                document.getElementById(
+                    "container-frame-home"
+                ).style.display = "none"
+                document.getElementById(
+                        "frameConsultas"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromLeft"
+                document.getElementById(
+                        "frameHome"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromLeft"
+            } // Pasar de la pestaña Pastillas a Consultas
+            else if (saltoDePagina === "Pastillas/Consultas") {
+                document.getElementById(
+                    "container-frame-pastillas"
+                ).style.display = "none"
+
+                document.getElementById(
+                        "frameConsultas"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromLeft"
+            } // Pasar de la pestaña Pastillas a Home o Consultas a Home
+            else if (
+                saltoDePagina === "Pastillas/Home" ||
+                saltoDePagina === "Consultas/Home"
+            ) {
+                document.getElementById(
+                    "container-frame-pastillas"
+                ).style.display = "none"
+                document.getElementById(
+                    "container-frame-consultas"
+                ).style.display = "none"
+
+                document.getElementById(
+                        "frameConsultas"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromRight"
+                document.getElementById(
+                        "frameHome"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromLeft"
+            } // Pasar de la pestaña Consultas a Pastillas
+            else if (saltoDePagina === "Consultas/Pastillas") {
+                document.getElementById(
+                    "container-frame-consultas"
+                ).style.display = "none"
+
+                document.getElementById(
+                        "frameConsultas"
+                    ).contentWindow.document.body.style.animation =
+                    "0.5s ease-out 0s 1 slideInFromLeft"
+            }
+        }
+    </script>
+
+    <!--SCRIPT GENERAL-->
+    <script src=".././../js/index.js"></script>
+    <!--SCRIPT DE MATERIALIZE-->
+    <script src=".././../js/materialize.min.js"></script>
+</body>
+
+</html>

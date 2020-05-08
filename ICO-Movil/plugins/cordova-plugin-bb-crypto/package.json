@@ -1,0 +1,69 @@
+{
+  "_from": "cordova-plugin-bb-crypto",
+  "_id": "cordova-plugin-bb-crypto@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-RWwUFvJNn0Xhngc/nmRBUsYxlQo=",
+  "_location": "/cordova-plugin-bb-crypto",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-bb-crypto",
+    "name": "cordova-plugin-bb-crypto",
+    "escapedName": "cordova-plugin-bb-crypto",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-bb-crypto/-/cordova-plugin-bb-crypto-1.0.0.tgz",
+  "_shasum": "456c1416f24d9f45e19e073f9e644152c631950a",
+  "_spec": "cordova-plugin-bb-crypto",
+  "_where": "C:\\Users\\Proyectos\\Desktop\\Proyecto ICO\\Client",
+  "author": {
+    "name": "Rob Williams, Jim Wood"
+  },
+  "bugs": {
+    "url": "https://github.com/blackberry/WebWorks-Community-APIs/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-bb-crypto",
+    "platforms": [
+      "blackberry10"
+    ]
+  },
+  "deprecated": false,
+  "description": "BlackBerry 10 Community Contributed API for cryptographic functions (hash, PRNG, AES block cipher)",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0"
+    }
+  ],
+  "homepage": "https://github.com/blackberry/WebWorks-Community-APIs/tree/master/BB10-Cordova/gseCrypto#readme",
+  "keywords": [
+    "blackberry",
+    "crypto",
+    "encrypt",
+    "decrypt",
+    "hash",
+    "SHA",
+    "prng",
+    "AES",
+    "cipher",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-blackberry10"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-bb-crypto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackberry/WebWorks-Community-APIs.git"
+  },
+  "version": "1.0.0"
+}

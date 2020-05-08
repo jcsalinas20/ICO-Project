@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ICO</title>
+
+        <!-- Importacion de JQuery -->
+        <script
+            src="js/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"
+        ></script>
+        <!--Import Google Icon Font-->
+        <link href="css/icon.css" rel="stylesheet" />
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="css/materialize.min.css" />
+
+        <link rel="stylesheet" href="css/index.css" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            label {
+                font-size: 2rem;
+                color: #827979;
+                padding: 0 15px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <iframe
+            style="display: none; position: absolute; z-index: 1;"
+            id="frame-preload"
+            src="pages/preload/preload.html"
+            frameborder="0"
+            width="100%"
+            height="100%"
+        ></iframe>
+        <div class="container-general">
+            <div class="logo">
+                <!-- Logo de la ICO -->
+                <img
+                    style="margin: auto;"
+                    src="img/logo_ico.png"
+                    alt="logo"
+                    height="100px"
+                    width="350px"
+                />
+            </div>
+            <div class="login">
+                <label id="lblUser"></label>
+                <div class="container-input">
+                    <!-- Texto Input para el usuario -->
+                    <input type="text" name="user" id="user" value="1234" />
+                </div>
+                <label id="lblPass"></label>
+                <div class="container-input">
+                    <!-- Texto Input para la contraseña -->
+                    <input type="text" name="user" id="pass" value="123456" />
+                </div>
+                <input type="button" id="submit" />
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("user").addEventListener("keydown", e => {
+                var input = $("#user")
+                letras = input.val().replace("/", "")
+                input.val(letras)
+            })
+            document.getElementById("pass").addEventListener("keydown", e => {
+                var input = $("#pass")
+                letras = input.val().replace("/", "")
+                input.val(letras)
+            })
+        </script>
+        <script src="js/index.js"></script>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="js/materialize.min.js"></script>
+
+        <script>
+            if (localStorage.getItem("jwt")) {
+                const token = localStorage.getItem("jwt")
+                var URL
+                if (token == "") {
+                    URL = `https://api-ico.herokuapp.com/api/null/perfil`
+                } else {
+                    URL = `https://api-ico.herokuapp.com/api/${token}/perfil`
+                }
+
+                peticion(URL, token)
+            }
+
+            
+            if (leng === "cat") {
+                document.getElementById("submit").value = "Iniciar Sessió"
+                document.getElementById("lblUser").innerHTML = "Usuari:"
+                document.getElementById("lblPass").innerHTML = "Contrasenya:"
+            } else {
+                document.getElementById("submit").value = "Iniciar Sesión"
+                document.getElementById("lblUser").innerHTML = "Usuario:"
+                document.getElementById("lblPass").innerHTML = "Contraseña:"
+            }
+        </script>
+    </body>
+</html>

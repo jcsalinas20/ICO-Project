@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ASDF</title>
+
+        <!-- Importacion de JQuery -->
+        <script
+            src="../../js/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"
+        ></script>
+        <!--Import Google Icon Font-->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="../../css/materialize.min.css" />
+
+        <link rel="stylesheet" href="perfil.css" />
+        <link rel="stylesheet" href="../../css/index.css" />
+
+        <script src="perfil.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            @keyframes topToBottom {
+                0% {
+                    transform: translateY(-100%);
+                }
+
+                50% {
+                    transform: translateY(20%);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            body {
+                animation: 0.7s ease-out 0s 1 topToBottom;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <i class="material-icons close" onclick="ocultarVentana()">close</i>
+            <h1 id="titleMenu">Perfil</h1>
+        </header>
+
+        <h4 class="textoNormal center margin-top-header" id="subtitle">
+            Mis Datos
+        </h4>
+        <div class="textoNormal container-datos">
+            <img id="foto-perfil" src="" alt="foto-perfil" />
+            <p id="nombre">null</p>
+            <p id="fecha"><b>Fecah Nacimiento:</b> null</p>
+            <p id="dni"><b>DNI:</b> null</p>
+            <p id="genero"><b>Genero:</b></p>
+            <p id="consultasP"><b>Consultas pendientes:</b></p>
+            <p id="consultasH"><b>Historial consultas:</b></p>
+        </div>
+
+        <h4 class="textoNormal center" id="opciones">Opciones</h4>
+        <div
+            class="textoNormal container-datos"
+            style="padding: 10px 10px;margin: 0px 15px 5px 15px;"
+        >
+            <a
+                id="sesion"
+                onclick="cerrarSesion()"
+                class="waves-effect waves-light btn"
+                style="width: 100%;"
+                >Cerrar Sesión</a
+            >
+        </div>
+        <div
+            class="textoNormal container-datos"
+            style="padding: 10px 10px;margin: 0px 15px 5px 15px;"
+        >
+            <a
+                id="contra"
+                onclick="cambiarContra()"
+                class="waves-effect waves-light btn"
+                style="width: 100%;"
+                >Cambiar Contraseña</a
+            >
+        </div>
+        <div
+            class="textoNormal container-datos"
+            style="padding: 10px 10px;margin: 0px 15px 5px 15px;"
+        >
+            <a
+                id="idioma"
+                onclick="cambiarIdioma()"
+                class="waves-effect waves-light btn"
+                style="width: 100%;"
+                >Cambiar Idioma</a
+            >
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("subtitle").innerHTML = "Les Meves Dades"
+                document.getElementById("opciones").innerHTML = "Opcions"
+                document.getElementById("sesion").innerHTML = "Tancar Sessió"
+                document.getElementById("contra").innerHTML = "Canviar Contrasenya"
+                document.getElementById("idioma").innerHTML = "Canviar Idioma"
+            }
+        </script>
+        <script src="../../js/index.js"></script>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="../../js/materialize.min.js"></script>
+    </body>
+</html>

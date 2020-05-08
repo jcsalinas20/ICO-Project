@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ICO</title>
+
+        <!-- Importacion de JQuery -->
+        <script
+            src="js/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"
+        ></script>
+        <!--Import Google Icon Font-->
+        <link href="css/icon.css" rel="stylesheet" />
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="css/materialize.min.css" />
+
+        <link rel="stylesheet" href="css/index.css" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            label {
+                font-size: 2rem;
+                color: #827979;
+                padding: 0 15px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-general">
+            <div class="logo">
+                <!-- Logo de la ICO -->
+                <img
+                    style="margin: auto;"
+                    src="img/logo_ico.png"
+                    alt="logo"
+                    height="100px"
+                    width="350px"
+                />
+            </div>
+            <div class="login">
+                <label>Usuario:</label>
+                <div class="container-input">
+                    <!-- Texto Input para el usuario -->
+                    <input
+                        type="text"
+                        name="user"
+                        id="user"
+                        value="1234"
+                    />
+                </div>
+                <label>Contraseña:</label>
+                <div class="container-input">
+                    <!-- Texto Input para la contraseña -->
+                    <input type="text" name="user" id="pass" value="1234" />
+                </div>
+                <input type="button" value="Iniciar Sesión" id="submit" />
+            </div>
+        </div>
+
+        <script src="js/index.js"></script>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="js/materialize.min.js"></script>
+    </body>
+</html>

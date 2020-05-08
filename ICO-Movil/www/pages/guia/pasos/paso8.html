@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const leng = localStorage.getItem("leng")
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../css/index.css" />
+        <link rel="stylesheet" href="../../../css/materialize.min.css" />
+        <style>
+            .text {
+                font-size: 20px;
+            }
+
+            #subtitulo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="textoNormal">
+        <p id="subtitulo" class="center" style="margin: 0 0 3px 0;">Ayuda</p>
+        <p id="parrafo" class="text" style="margin: 0;">
+            En esta pantalla de Ayuda te aparece la información del Hospital de
+            Hospitalet de Llobregat, como el teléfono y la dirección del Hospital
+            mas un mapa del Google Maps.
+        </p>
+        <div class="center">
+            <img
+                class="center"
+                width="275px"
+                src="../../../img/ayuda.JPG"
+                alt="ico-logo"
+            />
+        </div>
+
+        <script>
+            if (leng === "cat") {
+                document.getElementById("subtitulo").innerHTML = "Ajuda"
+                document.getElementById("parrafo").innerHTML = "En aquesta pantalla d'Ajuda t'apareix la informació de l'Hospital de l'Hospitalet de Llobregat, com el telèfon i l'adreça de l'Hospital mes un mapa de Google Maps."
+            }
+        </script>
+    </body>
+</html>

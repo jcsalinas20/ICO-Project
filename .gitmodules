@@ -1,0 +1,9 @@
+[submodule "ICO-API"]
+	path = ICO-API
+	url = https://github.com/jcsalinas20/ICO-API
+[submodule "ICO-Desktop"]
+	path = ICO-Desktop
+	url = https://github.com/jcsalinas20/ICO-Desktop
+[submodule "ICO-Movil"]
+	path = ICO-Movil
+	url = https://github.com/jcsalinas20/ICO-Movil

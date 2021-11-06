@@ -1,10 +1,12 @@
 # ICO-Project
 
-TPV Hospital Project with collaborators @mmoralesl.
+ICO Hospital Project with collaborator @mmoralesl. 
+
+* ## [WIKI](https://github.com/jcsalinas20/ICO-Movil/wiki)
 
 * ## MongoDB
 
-### Documents Consultas
+### Documents [Consultas](https://github.com/jcsalinas20/ICO-Project/tree/master/mongodb/Consultas)
 ```js
 {
   id_consulta: Integer,
@@ -24,7 +26,7 @@ TPV Hospital Project with collaborators @mmoralesl.
 }
 ```
 
-### Documents Doctores
+### Documents [Doctores](https://github.com/jcsalinas20/ICO-Project/tree/master/mongodb/Doctores)
 ```js
 {
   id_doctor: Integer,
@@ -48,7 +50,7 @@ TPV Hospital Project with collaborators @mmoralesl.
 }
 ```
 
-### Documents Hospitales
+### Documents [Hospitales](https://github.com/jcsalinas20/ICO-Project/tree/master/mongodb/Hospital)
 ```js
 {
   id_hospital: Integer,
@@ -57,7 +59,7 @@ TPV Hospital Project with collaborators @mmoralesl.
 }
 ```
 
-### Documents Medicamentos
+### Documents [Medicamentos](https://github.com/jcsalinas20/ICO-Project/tree/master/mongodb/Medicamentos)
 ```js
 {
   id: Integer,
@@ -66,7 +68,7 @@ TPV Hospital Project with collaborators @mmoralesl.
 }
 ```
 
-### Documents Pacientes
+### Documents [Pacientes](https://github.com/jcsalinas20/ICO-Project/tree/master/mongodb/Pacientes)
 ```js
 {
   id_paciente: Integer,
@@ -112,55 +114,55 @@ TPV Hospital Project with collaborators @mmoralesl.
 
 ### Login
 
-![login](http://imgfz.com/i/v2tmdIE.png)
+![login](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/pc/login.PNG)
 
 ### Dashboard
 
-![dashboard](http://imgfz.com/i/WyPxmCO.png)
+![dashboard](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/pc/dashboard.PNG)
 
 ### Search
 
-![dashboard](http://imgfz.com/i/cOylRfa.png)
+![search](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/pc/serach.PNG)
 
 ### Consultas
 
-![dashboard](http://imgfz.com/i/ZzK9YAo.png)
+![consultas](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/pc/consultas.PNG)
 
 ### Medicamentos
 
-![dashboard](http://imgfz.com/i/sBfLuhl.png)
+![medicamentos](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/pc/medicamentos.PNG)
 
 * ## [ICO-Mobile](https://github.com/jcsalinas20/ICO-Movil)
 
 ### Login
 
-![login](http://imgfz.com/i/9hcH8gZ.png)
+![login](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/login.PNG)
 
 ### Welcome
 
-![welcome](http://imgfz.com/i/DAyztMe.png)
+![welcome](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/welcome.PNG)
 
 ### Side Menu
 
-![sidemenu](http://imgfz.com/i/xRpY9VQ.png)
+![sidemenu](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/sidemenu.PNG)
 
 ### Home
 
-![home](http://imgfz.com/i/X6TAPrR.png)
+![home](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/noticas.PNG)
 
 ### Consultas
 
-![consultas](http://imgfz.com/i/4z60evE.png)
-![consulta](http://imgfz.com/i/Xdtvmyx.png)
+![consultas](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/consultas.PNG)
+![consulta](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/consulta.PNG)
 
 ### Medicamentos
 
-![medicamentos](http://imgfz.com/i/Q9CZ5Gt.png)
+![medicamentos](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/pastillas.PNG)
 
 ### Perfil
 
-![perfil](http://imgfz.com/i/azWAgxb.png)
+![perfil](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/perfil.PNG)
 
 ### Hospital ICO
 
-![hospitalico](http://imgfz.com/i/GXn6gLN.png)
+![hospitalico](https://raw.githubusercontent.com/jcsalinas20/ICO-Project/master/images/movil/ayuda.PNG)

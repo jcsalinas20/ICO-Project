@@ -2,7 +2,7 @@
 
 ICO Hospital Project with collaborator @mmoralesl. 
 
-* ## [WIKI](https://github.com/jcsalinas20/ICO-Movil/wiki)
+* ## [WIKI](https://github.com/jcsalinas20/ICO-Movil/wik)
 
 * ## MongoDB
 
